@@ -9,6 +9,12 @@ const CocktailList = () => {
   if(loading){
     return<Loading/>
   }
+  if(Cocktails.length < 1) {
+    return(
+    <h2 className='section-title'>
+      no cocktails match your search
+    </h2>)
+  }
   return (
     <div>
       <h2>cocktail list component</h2>
